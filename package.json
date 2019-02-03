@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Tree-sitter parser for the Racket programming language",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tautologico/tree-sitter-racket.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +15,11 @@
     "racket"
   ],
   "author": "Andrei Formiga",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.12.1"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.14.0-beta3"
+  }
 }
