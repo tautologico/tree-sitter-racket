@@ -1,6 +1,8 @@
 module.exports = grammar({
   name: 'racket',
 
+  extras: $ => [ $._comment, /\s+/ ],
+
   rules: {
     source_file: $ => seq(
       $.lang_line,
@@ -19,6 +21,8 @@ module.exports = grammar({
 
     identifier: $ => /[a-z]+/,
 
-    number: $ => /\d+/
+    number: $ => /\d+/,
+
+    _comment: $ => token(seq(';', /.*/))
   }
 });
