@@ -1,0 +1,7 @@
+#lang test
+32                ; this is a line comment
+'akaibara
+"a little string"
+#t
+#F
+#T

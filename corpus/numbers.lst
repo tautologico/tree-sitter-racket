@@ -1,0 +1,26 @@
+=======
+Numbers
+=======
+
+#lang numbers
+42
+32.77
+123/15
+0.123456789
+#xFF
+#xab
+#xDEADBEEF
+#x00
+
+---
+
+(source_file
+  (lang_line (symbol))
+  (datum (number))
+  (datum (number))
+  (datum (number))
+  (datum (number))
+  (datum (number))
+  (datum (number))
+  (datum (number))
+  (datum (number)))
