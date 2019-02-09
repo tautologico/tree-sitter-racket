@@ -9,17 +9,20 @@ module.exports = grammar({
       repeat($.datum)
     ),
 
-    lang_line: $ => seq('#lang', $.identifier),
+    lang_line: $ => seq('#lang', $.symbol),
 
     datum: $ => choice(
       $.number,
-      $.identifier,
+      $.symbol,
+      $.string,
       $.quoted_datum
     ),
 
+    string: $ => seq('"', /[^"]*/, '"'),    // TODO: escaped quotes
+
     quoted_datum: $ => seq("'", $.datum),
 
-    identifier: $ => /[a-z]+/,
+    symbol: $ => /[a-z]+/,
 
     number: $ => /\d+/,
 
