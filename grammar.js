@@ -26,7 +26,7 @@ module.exports = grammar({
 
     string: $ => seq('"', /[^"]*/, '"'),    // TODO: escaped quotes
 
-    quoted_datum: $ => seq("'", $.datum),
+    quoted_datum: $ => seq(choice("'", "`"), $.datum),
 
     number: $ => token(choice(
       /\d+([\./]\d+)?/,
